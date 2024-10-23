@@ -189,6 +189,16 @@
             margin: 1.5rem 0;
             text-shadow: var(--glow);
         }
+
+        .code-block {
+            background-color: var(--matrix-black);
+            border: 1px solid var(--matrix-dark-green);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
     </style>
 </head>
 <body>
@@ -201,53 +211,50 @@
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="installation.html">Installation</a></li>
             <li class="nav-item"><a href="manual.html">Manual</a></li>
-          
-
             <li class="nav-item"><a href="lvl1.html">Level 1</a></li>
             <li class="nav-item"><a href="lvl2.html">Level 2</a></li>
             <li class="nav-item"><a href="lvl3.html">Level 3</a></li>
             <li class="nav-item"><a href="lvl4.html">Level 4</a></li>
             <li class="nav-item"><a href="lvl5.html">Level 5</a></li>
-            <li class="nav-item"><a href="lvl6.html"></a>Level 6</li>
+            <li class="nav-item"><a href="lvl6.html">Level 6</a></li>
+            <li class="nav-item"><a href="lvl7.html">Level 7</a></li>
+            <li class="nav-item"><a href="lvl8.html">Level 8</a></li>
+            <li class="nav-item"><a href="lvl9.html">Level 9</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
-        <section class="welcome-section">
-            <h1 class="welcome-title">Welcome to the System, Neo</h1>
+    <main class="main-content"> <section class="welcome-section">
+        <h1 class="welcome-title">Level 5: Difference between 2 files</h1>
+        
+        <h2 class="section-header">Task Overview</h2>
+        <p class="welcome-text">
+            Find out the difference between 2 .txt files, and you might get your answer.
+
+            <br>
+            <br>
+        
+        </p>
+    
+        <h2 class="section-header">Commands</h2>
+        <p class="welcome-text">
+            <code class = "code-block">diff,ls,cd,cat</code>
+        </p>
+    
+        <p class="welcome-text">
             
-            <p class="welcome-text">
-                Greetings. I've been expecting you. I am Morpheus, and you've just taken your first step into a larger world. 
-                The system you've accessed is unlike anything you've encountered before. Here, you'll need to master the 
-                fundamental tools of hackers and cybersecurity specialists to uncover the truth.
-            </p>
 
-            <h2 class="section-header">Your Mission</h2>
-            <p class="welcome-text">
-                You've always known something wasn't quite right with the world around you. Now it's time to see how deep 
-                the rabbit hole goes. Throughout this challenge, you'll need to navigate through various systems, discover 
-                hidden flags, and unveil the truth piece by piece.
-            </p>
-
-            <h2 class="section-header">Rules of Engagement</h2>
-            <ul class="rules">
-                <li>Each level contains a hidden flag in the format: FLAG{xxxxxxxx}</li>
-                <li>Use only the tools provided - no external scripts or automated tools</li>
-                <li>Document your progress - knowledge is power</li>
-                <li>If you get stuck, remember: "Free your mind"</li>
-            </ul>
-
-            <p class="welcome-text">
-                Remember, Neo: The truth is out there, hidden in plain sight waiting for you to glance over.
-            </p>
-            
-            <p class="welcome-text">
-                Ready to begin? Show me how deep the rabbit hole goes.
-            </p>
-
-            <div class="command-prompt">./start-game.sh</div>
-        </section>
+        </p>
+    
+        <div class="command-prompt">./level5_start</div>
+    </section>
     </main>
 </body>
 </html>
+
+
+
+
+
+
+
