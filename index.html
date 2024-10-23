@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./style.css">
+    <title>Bandit Game Style Layout</title>
+    
+</head>
+<body>
+  
+    <div class="top-bar">
+        <img src="https://via.placeholder.com/150x50" alt="Logo" class="logo">
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <h2>Bandit Levels</h2>
+            <ul>
+                <li><a onclick="showLevel('manual')">Manual</a></li>
+                <li><a onclick="showLevel('level1')">Level 1</a></li>
+                <li><a onclick="showLevel('level2')">Level 2</a></li>
+                <li><a onclick="showLevel('level3')">Level 3</a></li>
+                <li><a onclick="showLevel('level4')">Level 4</a></li>
+                <li><a onclick="showLevel('level5')">Level 5</a></li>
+                <li><a onclick="showLevel('level6')">Level 6</a></li>
+                <li><a onclick="showLevel('level7')">Level 7</a></li>
+                <li><a onclick="showLevel('level8')">Level 8</a></li>
+                <li><a onclick="showLevel('level9')">Level 9</a></li>
+                <li><a onclick="showLevel('level10')">Level 10</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <section id="manual" class="level-section">
+                <h2>Manual</h2>
+                <p>The manual section contains general instructions, tips, or any relevant information for the Bandit game.</p>
+            </section>
+
+            <section id="level1" class="level-section">
+                <h2>Level 1</h2>
+                <p>Instructions for Level 1 go here...</p>
+            </section>
+
+            <section id="level2" class="level-section">
+                <h2>Level 2</h2>
+                <p>Instructions for Level 2 go here...</p>
+            </section>
+
+            <section id="level3" class="level-section">
+                <h2>Level 3</h2>
+                <p>Instructions for Level 3 go here...</p>
+            </section>
+
+            <section id="level4" class="level-section">
+                <h2>Level 4</h2>
+                <p>Instructions for Level 4 go here...</p>
+            </section>
+
+            <section id="level5" class="level-section">
+                <h2>Level 5</h2>
+                <p>Instructions for Level 5 go here...</p>
+            </section>
+
+            <section id="level6" class="level-section">
+                <h2>Level 6</h2>
+                <p>Instructions for Level 6 go here...</p>
+            </section>
+
+            <section id="level7" class="level-section">
+                <h2>Level 7</h2>
+                <p>Instructions for Level 7 go here...</p>
+            </section>
+
+            <section id="level8" class="level-section">
+                <h2>Level 8</h2>
+                <p>Instructions for Level 8 go here...</p>
+            </section>
+
+            <section id="level9" class="level-section">
+                <h2>Level 9</h2>
+                <p>Instructions for Level 9 go here...</p>
+            </section>
+
+            <section id="level10" class="level-section">
+                <h2>Level 10</h2>
+                <p>Instructions for Level 10 go here...</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function showLevel(levelId) {
+            var sections = document.querySelectorAll('.level-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var selectedLevel = document.getElementById(levelId);
+            selectedLevel.classList.add('active');
+        }
+
+        showLevel('level1');
+    </script>
+</body>
+</html>
