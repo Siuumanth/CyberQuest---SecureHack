@@ -404,6 +404,16 @@
             margin: 1.5rem 0;
             text-shadow: var(--glow);
         }
+
+        .code-block {
+            background-color: var(--matrix-black);
+            border: 1px solid var(--matrix-dark-green);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
     </style>
 </head>
 <body>
@@ -411,7 +421,7 @@
     <!-- Sidebar Navigation -->
 <nav class="sidebar">
     <div class="sidebar-logo">
-        <h2>The Rabbit Hole</h2>
+        <h2>Setting Up</h2>
     </div>
     <ul class="nav-menu">
         <li class="nav-item"><a href="index.html">Home</a></li>
@@ -427,110 +437,60 @@
 </nav>
 
 <main class="main-content">
-
-    
-
-   
     <div class="welcome-section">
-       
-
       
-        <section class="basic-commands">
-            <h2>Basic Commands - Your First Tools</h2>
-            <p>Before we begin, you'll need to understand the basic tools at your disposal:</p>
-            
-            <div class="navigation-exploration">
-                <h3>Navigation & Exploration</h3>
-                <ul>
-                    <li><code>ls</code> - Lists all files in the current directory
-                        <ul>
-                            <li><code>ls</code> - Basic list</li>
-                            <li><code>ls -l</code> - Detailed list</li>
-                            <li><code>ls -la</code> - Show hidden files</li>
-                        </ul>
-                    </li>
-                    <li><code>cd</code> - Change directory
-                        <ul>
-                            <li><code>cd /home/neo</code> - Go to specific directory</li>
-                            <li><code>cd ..</code> - Go up one level</li>
-                            <li><code>cd ~</code> - Go to home directory</li>
-                        </ul>
-                    </li>
-                    <li><code>pwd</code> - Print working directory (shows where you are)</li>
-                </ul>
-            </div>
-
-            <div class="information-gathering">
-                <h3>Information Gathering</h3>
-                <ul>
-                    <li><code>cat</code> - Display file contents
-                        <ul>
-                            <li><code>cat message.txt</code></li>
-                        </ul>
-                    </li>
-                    <li><code>man</code> - Manual pages (help system)
-                        <ul>
-                            <li><code>man ls</code> - Shows manual for ls command</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="file-operations">
-                <h3>File Operations</h3>
-                <ul>
-                    <li><code>grep</code> - Search for patterns
-                        <ul>
-                            <li><code>grep "flag" file.txt</code></li>
-                        </ul>
-                    </li>
-                    <li><code>find</code> - Search for files
-                        <ul>
-                            <li><code>find . -name "*.txt"</code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section class="rules-of-engagement">
-            <h2>Rules of Engagement</h2>
+            <h2>Setting up</h2>
             <ol>
-                <li>Each level contains a hidden flag in the format: FLAG{xxxxxxxx}</li>
-                <li>Use only the tools provided - no external scripts or automated tools</li>
-                <li>Document your progress - knowledge is power</li>
-                <li>If you get stuck, remember: "Free your mind"</li>
+                <li><b>Step 1:</b>
+                    <br>
+                    Setup docker on your machine. <a href = "https://www.docker.com/products/docker-desktop/">Visit here to install Docker.</a>
+
+                </li>
+                <br>
+                <br>
+                <li><b>Step 2 :</b>
+                    
+                    <br>Run this command on your terminal to clone our Github repository which contains the game folder:</li>
+                    <br>
+                    <code class = "code-block"> git clone </code>
+                    <br>
+
+                    <br>
+                <li><b>Step 3 : </b>
+                    <br> Type the following command to start the game:
+                    <br>
+                    <br>
+                    <code class = "code-block"> ./start-game.sh</code>
+
+                </li>
+                <br>
+
+                <li><b>Step 4 :</b>
+                    <br>
+To play the levels, you have to ssh into each folder to start it.
+<br>
+ Each level gives you the password for the next level.
+
+ <br>
+ <br>
+ Suppose you want to play level x, execute:
+
+ <br>
+ <br>
+ <code class = "code-block" >ssh levelx@localhost -p "port" </code>
+ <br>
+ <br>
+ The port number for each level will be given before. 
+ <br>
+ <br>
+
+The port number for level 1 is 2222 and password is "password".
+</li>
             </ol>
         </section>
 
-        <section class="getting-started">
-            <h2>Getting Started</h2>
-            <p>Begin by exploring your current directory:</p>
-            <div class="code-block">
-                <code>pwd</code> - See where you are
-            </div>
-            <div class="code-block">
-                <code>ls -la</code> - List all files, including hidden ones
-            </div>
-        </section>
-
-        <section class="tips-for-success">
-            <h2>Tips for Success</h2>
-            <ul>
-                <li>Read file contents carefully - flags might be hidden in plain text</li>
-                <li>Check for hidden files (files starting with .)</li>
-                <li>Look for unusual permissions or file sizes</li>
-                <li>Remember to check manual pages if you're unsure about a command</li>
-            </ul>
-        </section>
-
-        <section class="final-note">
-            <h2>Ready to Begin?</h2>
-            <p>Show me how deep the rabbit hole goes.</p>
-            <div class="code-block">
-                <code>./start</code> - Begin your first challenge.
-            </div>
-        </section>
+        
     </div>
 </main>
 
