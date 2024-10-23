@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Installation Guide</title>
+    <style>
+        :root {
+            --matrix-green: #00ff00;
+            --matrix-dark-green: #003300;
+            --matrix-black: #000000;
+            --matrix-grey: #1a1a1a;
+            --matrix-light-grey: #333333;
+            --text-color: #cccccc;
+           
+        }
+
+    
+        
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--matrix-black);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--matrix-grey);
+            color: var(--matrix-green);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--matrix-green);
+            box-shadow: var(--glow);
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite;
+            letter-spacing: 2px;
+        }
+
+        .platform-section {
+            background: var(--matrix-grey);
+            border: 1px solid var(--matrix-green);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--glow);
+            animation: borderGlow 4s ease-in-out infinite;
+        }
+
+        h2 {
+            color: var(--matrix-green);
+            border-bottom: 2px solid var(--matrix-dark-green);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            text-shadow: var(--glow);
+        }
+
+        h3 {
+            color: var(--matrix-green);
+            margin-top: 1.5rem;
+        }
+
+        .code-block {
+            background-color: var(--matrix-black);
+            border: 1px solid var(--matrix-dark-green);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        code {
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: ">";
+            color: var(--matrix-green);
+            position: absolute;
+            left: -1.2rem;
+        }
+
+        .note {
+            background-color: var(--matrix-light-grey);
+            border-left: 4px solid var(--matrix-green);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        a {
+            color: var(--matrix-green);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-shadow: var(--glow);
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--matrix-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .step {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .step:hover {
+            background-color: rgba(0, 255, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--matrix-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--matrix-dark-green);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--matrix-green);
+        }
+
+        /* Selection style */
+        ::selection {
+            background: var(--matrix-dark-green);
+            color: var(--matrix-green);
+        }
+
+        /* Animation for code blocks */
+        .code-block:hover {
+            border-color: var(--matrix-green);
+            box-shadow: var(--glow);
+            transition: all 0.3s ease;
+        }
+
+        /* Typing cursor effect for code blocks */
+        .code-block code::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rabbit Hole - Welcome</title>
+    <style>
+        :root {
+            --matrix-green: #00ff00;
+            --matrix-dark-green: #003300;
+            --matrix-black: #000000;
+            --matrix-grey: #1a1a1a;
+            --matrix-light-grey: #333333;
+            --text-color: #cccccc;
+        
+            --sidebar-width: 250px;
+        }
+
+
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: var(--matrix-black);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--matrix-grey);
+            border-right: 1px solid var(--matrix-green);
+            padding: 2rem 0;
+            box-shadow: var(--glow);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-logo {
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--matrix-dark-green);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-logo h2 {
+            color: var(--matrix-green);
+            animation: glow 2s ease-in-out infinite;
+            margin: 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background-color: var(--matrix-light-grey);
+        }
+
+        .nav-item:hover a {
+            color: var(--matrix-green);
+            text-shadow: var(--glow);
+            transform: translateX(10px);
+        }
+
+        .nav-item::before {
+            content: '>';
+            color: var(--matrix-green);
+            position: absolute;
+            left: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            background: repeating-linear-gradient(
+                0deg,
+                var(--matrix-black) 0px,
+                var(--matrix-black) 2px,
+                transparent 2px,
+                transparent 4px
+            );
+        }
+
+        .welcome-section {
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--matrix-green);
+            border-radius: 8px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            box-shadow: var(--glow);
+        }
+
+        .welcome-title {
+            color: var(--matrix-green);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .welcome-text {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .rules {
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .rules li {
+            margin-bottom: 1rem;
+            list-style-type: none;
+            position: relative;
+        }
+
+        .rules li::before {
+            content: ">";
+            color: var(--matrix-green);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .command-prompt {
+            color: var(--matrix-green);
+            font-family: 'Courier New', Courier, monospace;
+            animation: blink 1s step-end infinite;
+            border-right: 0.15em solid var(--matrix-green);
+            white-space: nowrap;
+            margin-top: 2rem;
+            padding: 0.5rem;
+            background: rgba(0, 51, 0, 0.3);
+            display: inline-block;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--matrix-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--matrix-dark-green);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--matrix-green);
+        }
+
+        .section-header {
+            color: var(--matrix-green);
+            margin: 1.5rem 0;
+            text-shadow: var(--glow);
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- Sidebar Navigation -->
+<nav class="sidebar">
+    <div class="sidebar-logo">
+        <h2>The Rabbit Hole</h2>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="installation.html">Installation</a></li>
+        <li class="nav-item"><a href="manual.html">Manual</a></li>
+        <li class="nav-item"><a href="lvl1.html">Level 1</a></li>
+        <li class="nav-item"><a href="lvl2.html">Level 2</a></li>
+        <li class="nav-item"><a href="lvl3.html">Level 3</a></li>
+        <li class="nav-item"><a href="lvl4.html">Level 4</a></li>
+        <li class="nav-item"><a href="lvl5.html">Level 5</a></li>
+        <li class="nav-item"><a href="lvl6.html">Level 6</a></li>
+    </ul>
+</nav>
+
+<main class="main-content">
+
+    
+
+   
+    <div class="welcome-section">
+       
+
+      
+        <section class="basic-commands">
+            <h2>Basic Commands - Your First Tools</h2>
+            <p>Before we begin, you'll need to understand the basic tools at your disposal:</p>
+            
+            <div class="navigation-exploration">
+                <h3>Navigation & Exploration</h3>
+                <ul>
+                    <li><code>ls</code> - Lists all files in the current directory
+                        <ul>
+                            <li><code>ls</code> - Basic list</li>
+                            <li><code>ls -l</code> - Detailed list</li>
+                            <li><code>ls -la</code> - Show hidden files</li>
+                        </ul>
+                    </li>
+                    <li><code>cd</code> - Change directory
+                        <ul>
+                            <li><code>cd /home/neo</code> - Go to specific directory</li>
+                            <li><code>cd ..</code> - Go up one level</li>
+                            <li><code>cd ~</code> - Go to home directory</li>
+                        </ul>
+                    </li>
+                    <li><code>pwd</code> - Print working directory (shows where you are)</li>
+                </ul>
+            </div>
+
+            <div class="information-gathering">
+                <h3>Information Gathering</h3>
+                <ul>
+                    <li><code>cat</code> - Display file contents
+                        <ul>
+                            <li><code>cat message.txt</code></li>
+                        </ul>
+                    </li>
+                    <li><code>man</code> - Manual pages (help system)
+                        <ul>
+                            <li><code>man ls</code> - Shows manual for ls command</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="file-operations">
+                <h3>File Operations</h3>
+                <ul>
+                    <li><code>grep</code> - Search for patterns
+                        <ul>
+                            <li><code>grep "flag" file.txt</code></li>
+                        </ul>
+                    </li>
+                    <li><code>find</code> - Search for files
+                        <ul>
+                            <li><code>find . -name "*.txt"</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rules-of-engagement">
+            <h2>Rules of Engagement</h2>
+            <ol>
+                <li>Each level contains a hidden flag in the format: FLAG{xxxxxxxx}</li>
+                <li>Use only the tools provided - no external scripts or automated tools</li>
+                <li>Document your progress - knowledge is power</li>
+                <li>If you get stuck, remember: "Free your mind"</li>
+            </ol>
+        </section>
+
+        <section class="getting-started">
+            <h2>Getting Started</h2>
+            <p>Begin by exploring your current directory:</p>
+            <div class="code-block">
+                <code>pwd</code> - See where you are
+            </div>
+            <div class="code-block">
+                <code>ls -la</code> - List all files, including hidden ones
+            </div>
+        </section>
+
+        <section class="tips-for-success">
+            <h2>Tips for Success</h2>
+            <ul>
+                <li>Read file contents carefully - flags might be hidden in plain text</li>
+                <li>Check for hidden files (files starting with .)</li>
+                <li>Look for unusual permissions or file sizes</li>
+                <li>Remember to check manual pages if you're unsure about a command</li>
+            </ul>
+        </section>
+
+        <section class="final-note">
+            <h2>Ready to Begin?</h2>
+            <p>Show me how deep the rabbit hole goes.</p>
+            <div class="code-block">
+                <code>./start</code> - Begin your first challenge.
+            </div>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>
