@@ -275,7 +275,7 @@
         }
 
         .nav-item {
-            padding: 0.5rem 1rem;
+            padding: 0.35rem 0.7rem;
             margin: 0.5rem 0;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -447,61 +447,60 @@
             <ol>
                 <li><b>Step 1:</b>
                     <br>
-                    Setup docker on your machine. <a href = "https://www.docker.com/products/docker-desktop/">Visit here to install Docker.</a>
-
+                    Setup docker on your machine. <a href="https://www.docker.com/products/docker-desktop/">Visit here to install Docker.</a>
                 </li>
                 <br>
                 <br>
                 <li><b>Step 2 :</b>
-                    
-                    <br>Run this command on your terminal to clone our Github repository which contains the game folder:</li>
+                    <br>Run this command on your terminal to clone our Github repository which contains the game folder:
                     <br>
-                    <code class = "code-block"> git clone https://github.com/bakeyed/THE-RABBIT-HOLE</code>
+                    <code class="code-block">git clone https://github.com/bakeyed/THE-RABBIT-HOLE</code>
                     <br>
-
                     <br>
                     Navigate to the git folder, and run the following command:
                     <br>
                     <br>
-                    <code class = "code-block">docker-compose up --build</code>
-                    <br>
-                    <br>
-
-
-                <li><b>Step 3 : </b>
-                    <br> Open a new terminal, navigate into the folder, type the following command to start the game:
-                    <br>
-                    <br>
-                    <code class = "code-block"> ./start-game.sh</code>
-
+                    <code class="code-block">docker-compose up --build</code>
                 </li>
                 <br>
-
-                <li><b>Step 4 :</b>
+                <li><b>Step 3:</b>
+                    <br>Open a new terminal, navigate into the folder, type the following command to start the game:
                     <br>
-To play the levels, you have to ssh into each folder to start it.
-<br>
- Each level gives you the password for the next level.
-
- <br>
- <br>
- Suppose you want to play level x, execute:
-
- <br>
- <br>
- <code class = "code-block" >ssh levelx@localhost -p "port" </code>
- <br>
- <br>
- The port number for each level will be given before. 
- <br>
- <br>
-
-The port number for level 1 is 2222 and password is "password".
-</li>
+                    <br>
+                    <code class="code-block">./start-game.sh</code>
+                </li>
+                <br>
+                <li><b>Step 4:</b>
+                    <br>To play the levels, you have to ssh into each folder to start it.
+                    <br>Each level gives you the password for the next level.
+                    <br>
+                    <br>Suppose you want to play level x, execute:
+                    <br>
+                    <br>
+                    <code class="code-block">ssh levelx@localhost -p "port"</code>
+                    <br>
+                    <br>
+                    The port number for each level will be given before.
+                    <br>
+                    <br>
+                    The port number for level 1 is 2222 and the password is "password".
+                </li>
             </ol>
         </section>
+<br>
+<br>
+        <section class="alternate-method">
+            <h2>Alternate method</h2>
+            <p>If you prefer not to use Docker, you can just download the game folders from <a href = "https://github.com/Siuumanth/THE-RABBIT-HOLE---Levels"> this github repository</a>, or execute :
+            
+            <code class = "code-block"> git clone https://github.com/Siuumanth/THE-RABBIT-HOLE---Levels</code>
+        <br><br>
+    Note that you don't need to worry about the port numbers or use SSH when you use this method, it is just working with folders on your device.</p>
+        </section>
 
-        
+     
+  
+
     </div>
 </main>
 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rabbit Hole - Welcome</title>
     <style>
+
+        
         :root {
             --matrix-green: #00ff00;
             --matrix-dark-green: #003300;
@@ -15,7 +17,6 @@
         
             --sidebar-width: 250px;
         }
-
 
 
         body {
@@ -60,7 +61,7 @@
         }
 
         .nav-item {
-            padding: 0.5rem 1rem;
+            padding: 0.35rem 0.7rem;
             margin: 0.5rem 0;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -189,6 +190,35 @@
             margin: 1.5rem 0;
             text-shadow: var(--glow);
         }
+
+        .footer {
+    background-color: var(--matrix-grey);
+    padding: 2rem;
+    border-top: 1px solid var(--matrix-green);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    margin: 1rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info strong {
+    color: var(--matrix-green);
+}
+
     </style>
 </head>
 <body>
@@ -252,7 +282,29 @@
             </p>
 
             <div class="command-prompt"></div>
+            
         </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="contact-info">
+                    <p><strong>Vibha V Muradi</strong></p>
+                    <p>Email: vibhamuradi.com</p>
+                
+                </div>
+                <div class="contact-info">
+                    <p><strong>Virajit G P</strong></p>
+                    <p>Email: virajitgp@gmail.com</p>
+                  
+                </div>
+                <div class="contact-info">
+                    <p><strong>Sumanth G</strong></p>
+                    <p>Email: gsumanth3005@gmail.com</p>
+                  
+                </div>
+            </div>
+        </footer>
+        
     </main>
 </body>
 </html>
