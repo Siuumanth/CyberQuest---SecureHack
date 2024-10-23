@@ -471,9 +471,16 @@
                             <li><code>cat message.txt</code></li>
                         </ul>
                     </li>
+                    <br>
                     <li><code>man</code> - Manual pages (help system)
                         <ul>
                             <li><code>man ls</code> - Shows manual for ls command</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><code>du</code> - estimates file space usage
+                        <ul>
+                            <li><code>du</code> - lists out space occupied by all files in the directory</li>
                         </ul>
                     </li>
                 </ul>
@@ -487,11 +494,39 @@
                             <li><code>grep "flag" file.txt</code></li>
                         </ul>
                     </li>
+                    <br>
                     <li><code>find</code> - Search for files
                         <ul>
                             <li><code>find . -name "*.txt"</code></li>
                         </ul>
                     </li>
+                    <br>
+                    <li><code>strings</code> - Search for human readable text in files
+                        <ul>
+                            <li><code>strings filename.txt</code> - finds out human readable text in the file</li>
+                        </ul>
+                    </li>
+
+                    <br>
+                    <li><code>base64</code> - used to decode or encode string in base64 format
+                        <ul>
+                            <li><code>echo text= | base64 -d</code> - decodes the text which is in base64 format, to get the password</li>
+                        </ul>
+                    </li>
+
+
+                    <br>
+                    <li><code>tr</code> - translating or deleting characters
+                        <ul>
+                            <li><code>echo "text" | tr 'A-Za-z' 'D-ZA-Cd-za-c'</code> - Uses a caesar cipher on the text, and decrypts it with the intended key. Here, key is D-A = Z-C = 3 </li>
+                        </ul>
+                    </li>
+                    <br>
+
+
+
+
+
                 </ul>
             </div>
         </section>
@@ -531,8 +566,7 @@
             <h2>Ready to Begin?</h2>
             <p>Show me how deep the rabbit hole goes.</p>
             <div class="code-block">
-                <code>./start</code> - Begin your first challenge.
-            </div>
+                <code>You ready yet?</code> 
         </section>
     </div>
 </main>
